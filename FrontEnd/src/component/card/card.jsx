@@ -7,7 +7,7 @@ function Card({ title, img, callBackFunction }) {
         <div className=" absolute text-center -translate-x-2/4 left-2/4  top-[10px]">
           <div className="relative w-[250px] h-[400px] duration-[0.4s]  cursor-pointer  ">
             <section className="absolute w-full  h-full bg-cover bg-[center_top]">
-              <div className="w-[250px] bg-white shadow-md rounded-xl duration-500 hover:bg-teal-200 hover:shadow-xl">
+              <div className="w-[250px] bg-[#effafc] shadow-md rounded-xl duration-500 hover:bg-teal-200 hover:shadow-xl">
                 <p >
                   <img
                   alt="image2"

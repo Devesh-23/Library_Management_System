@@ -1,41 +1,27 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import Cartcard from "./cartcard"
-
+import { bookData } from '../../component/data/bookData';
 //this is just for the cart
-export const sampleData = [
-    {
-      id: 1,
-      title: "First Post!",
-      img: "https://www.searchenginejournal.com/wp-content/uploads/2020/08/7-ways-a-blog-can-help-your-business-right-now-5f3c06b9eb24e-1520x800.webp",
 
-    },
-    {
-      id: 2,
-      title: "Second Post!",
-      img: "https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-
-    },
-
-  ];
   
 
 function Cart() {
-    const cart = sampleData.map((data) => {
-        return <Cartcard key={data.id} title={data.title}></Cartcard>
+    const cart = bookData.slice(1,3).map((data) => {
+        return <Cartcard key={data._id.$oid} title={data.book_title} author={data.book_author} img={data.image_url_l}></Cartcard>
     })
     return (
         
-        <div className="h-screen bg-pink-600 pt-24">
-            <h1 className="mb-10 text-center text-2xl font-bold">Your Books</h1>
+        <div className=" bg-[#BEFFF7] pt-24">
+            <h1 className="mb-10 text-center text-2xl font-bold ju">Your Books</h1>
             <div className="mx-auto max-w-5xl justify-center px-4 md:flex md:space-x-4 xl:px-0">
                 <div className="rounded-lg md:w-2/3 " >
                     {cart}
                 </div>
-                <div className="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
+                <div className="mt-20 h-full rounded-lg border bg-white p-6 shadow-md md:mt-10 md:w-1/3">
                     <div className="mb-2 flex justify-between">
                         <p className="text-gray-700">Total no of books Issued </p>
-                        <p className="text-gray-700">1</p>
+                        <p className="text-gray-700">2</p>
                     </div>
                     <div className="flex justify-between">
                         <p className="text-gray-700">Fine for Late submission</p>

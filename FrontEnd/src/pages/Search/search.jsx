@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
-import SearchCard from "./searchCard";
+import Card from "../../component/card/card";
 // import { MoonLoader } from "react-spinners";
 import { useParams } from "react-router-dom";
 
@@ -11,7 +11,7 @@ function SearchResults({redirectionTo}) {
   const listInnerRef = useRef();
   const [currPage, setCurrPage] = useState(1);
   const [prevPage, setPrevPage] = useState(0);
-  const [bookList, setBookList] = useState([]);
+  const [bookList, setBookList] = useState([]); 
   const [lastPage, setLastPage] = useState(false);
 
   const key = process.env.REACT_APP_API_KEY;
@@ -77,10 +77,9 @@ function SearchResults({redirectionTo}) {
           {bookList &&
             bookList.length > 0 &&
             bookList.map((i, index) => (
-              <SearchCard
-                key={index}
+              <Card
                 title={i.volumeInfo.title}
-                img_src={i.volumeInfo?.imageLinks?.thumbnail}
+                img={i.volumeInfo?.imageLinks?.thumbnail}
               />
             ))}
         </div>
