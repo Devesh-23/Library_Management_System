@@ -26,8 +26,8 @@ function Hero() {
       </div>
       <div className="bg-[#effafc] py-32 invisible lg:visible flex align-middle">
         <img
-          className="w-[38rem]"
-          src="books_mint.jpg"
+          className="w-[700px]"
+          src="https://img.freepik.com/free-vector/people-library-flat-vector-illustration_74855-6607.jpg?size=626&ext=jpg&ga=GA1.2.1884151692.1695570958&semt=ais"
           alt="hero_image"
         ></img>
       </div>

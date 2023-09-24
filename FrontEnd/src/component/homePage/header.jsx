@@ -4,7 +4,6 @@ import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import { Link } from 'react-router-dom'
 import {
   ArrowPathIcon,
-  Bars3Icon,
   ChartPieIcon,
   CursorArrowRaysIcon,
   FingerPrintIcon,
@@ -42,7 +41,7 @@ export default function Header() {
        <Link to="/" className=''>
        <div className="flex lg:flex-1">
             <img className="h-10 w-auto" src="book.png" alt="logo" />
-          <p className='flex text-2xl align-middle px-2 pt-1 font-semibold'>Codex</p>
+          <p className='flex text-2xl align-middle px-2 pt-1 font-semibold'>Library Management</p>
         </div>
        </Link>
        <div className="w-3/6">

@@ -22,7 +22,7 @@ function Login() {
   useEffect(() => {
     /* global google */
     google.accounts.id.initialize({
-      client_id: "834208871160-k1fvufn3o3ftp8c58j6fft2hbe87gtnh.apps.googleusercontent.com",
+      client_id: process.env.REACT_APP_CLIENT_ID,
       callback: handleCallbackResponse
     });
     google.accounts.id.renderButton(
@@ -75,7 +75,7 @@ function Login() {
         </div>:
       <div className="flex flex-col overflow-hidden rounded-md max md:flex-row md:flex-1 lg:max-w-screen-md shadow-lg shadow-gray-500/50">
         <div className="text-white bg-[#effafc] w-0 md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly invisible md:visible">
-          <img alt="image1" src="books_mint.jpg" />
+          <img alt="image1" src="https://img.freepik.com/free-vector/people-library-flat-vector-illustration_74855-6607.jpg?size=626&ext=jpg&ga=GA1.2.1884151692.1695570958&semt=ais" />
         </div>
         <div>
           <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
@@ -90,7 +90,7 @@ function Login() {
         alt="logo"
         />
         </Link>
-      Codex
+      Library Mangement
     </div>
               <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900 pb-4">
                 Sign in to your account

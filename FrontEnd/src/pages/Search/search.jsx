@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import SearchCard from "./searchCard";
-import { MoonLoader } from "react-spinners";
+// import { MoonLoader } from "react-spinners";
 import { useParams } from "react-router-dom";
 
 
@@ -14,7 +14,7 @@ function SearchResults({redirectionTo}) {
   const [bookList, setBookList] = useState([]);
   const [lastPage, setLastPage] = useState(false);
 
-  const key = "AIzaSyB3weTpE_uWcbQFLITLLf3clroI4EOB7Sw";
+  const key = process.env.REACT_APP_API_KEY;
 
 
   useEffect(() => {
