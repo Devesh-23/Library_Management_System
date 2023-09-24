@@ -1,19 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Lottie from "lottie-react";
+import BookAnime from "../../assets/BookAnime.json"
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
 
 function Hero() {
+  const style = {
+    padding:20,
+    height:500,
+    
+  }
   return (
-    <div className="bg-sky-100 h-full flex pl-2 md:pl-8 justify-between text-black">
+    <div className="bg-[#effafc] h-full flex pl-2 md:pl-8 justify-between text-black">
       <div className="flex flex-col py-64 xl:px-8 px-2">
-        <div className="py-4 text-6xl sm:text-8xl font-semibold font-sans xl:py-4 bg-gradient-to-r from-orange-600 via-purple-600 to-blue-600 text-transparent bg-clip-text bg-300% animate-gradient">
-          The Gateway<br></br> to Knowledge
+        <div className="py-4 text-6xl sm:text-8xl font-semibold font-sans xl:py-4 bg-gradient-to-r from-red-600 via-green-400 to-blue-600 text-transparent bg-clip-text bg-300% animate-gradient">
+         Unlock the World<br></br>of Knowledge
         </div>
         <div className="text-xl sm:text-3xl font-light">
-          Read your favourite books<br></br>
-          <span className="text-orange-600 font-normal">Explore</span>, &nbsp;
-          <span className="text-purple-600 font-normal">Discover</span> and
+          Your Library, Your Way!<br></br>
+          <span className="text-orange-600 font-normal">Efficient</span>, &nbsp;
+          <span className="text-purple-600 font-normal">Organized,</span> and
           &nbsp;
-          <span className="text-blue-600 font-normal">Learn</span>!
+          <span className="text-blue-600 font-normal">Accessible</span>!
         </div>
         <div>
           <Link to={'/login'}>
@@ -25,11 +34,7 @@ function Hero() {
         </div>
       </div>
       <div className="bg-[#effafc] py-32 invisible lg:visible flex align-middle">
-        <img
-          className="w-[700px]"
-          src="https://img.freepik.com/free-vector/people-library-flat-vector-illustration_74855-6607.jpg?size=626&ext=jpg&ga=GA1.2.1884151692.1695570958&semt=ais"
-          alt="hero_image"
-        ></img>
+        <Lottie animationData={BookAnime} style={style} />
       </div>
     </div>
   );

@@ -6,15 +6,15 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <div className='bg-black h-60'>
-      <div className='flex justify-center pt-24 gap-12'>
-        <Link to='https://github.com/'>
+    <div className='bg-black h-60 mt-24'>
+      <div className='flex justify-center pt-36 gap-12'>
+        <Link to='https://github.com/Devesh-23'>
           <FaGithub size={40} style={{ color: "#FFFFFF" }}/>
         </Link>
-        <Link to='https://github.com/'>
+        <Link to='http://www.linkedin.com/in/deveshpachauri'>
           <FaLinkedin size={40} style={{ color: "#FFFFFF" }}/>
         </Link>
-        <Link to='https://github.com/'>
+        <Link to=''>
           <AiOutlineMail size={40} style={{ color: "#FFFFFF" }}/>
         </Link>
       </div>

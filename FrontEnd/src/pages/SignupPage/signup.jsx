@@ -9,7 +9,7 @@ function Signup() {
     const passwordInput = document.querySelector('#password').value
     // setSignUpDetails({username:`${usernameInput}`,email:`${emailInput}`,password:`${passwordInput}`})
     // console.log(signUpDetails)
-    const url = `https://chimes-api.vercel.app/api/v2/auth/register`
+    // const url = `https://chimes-api.vercel.app/api/v2/auth/register`
     const item = {username:`${usernameInput}`,email:`${emailInput}`,password:`${passwordInput}`}
     // postUser(item,url)
     alert('you have successfully signed up')
@@ -17,7 +17,7 @@ function Signup() {
   return (
     <div>
       {/* <Header/> */}
-    <div className="bg-gray-50">
+    <div className="bg-[#effafc]">
       
   <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
     <div

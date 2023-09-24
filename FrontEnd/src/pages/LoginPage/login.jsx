@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Header from "../../component/homePage/header";
 import { Link } from "react-router-dom";
 import jwtDecode from "jwt-decode";
+
+
+
 function Login() {
   const [user,setUser] = useState({});
   const [log,setLog] = useState(false);
@@ -41,18 +43,14 @@ function Login() {
     try {
       const url = ``
       const item = {email,password}
-      // const {user,token} = await postUser(item,url)
-      // console.log(user)
-      // console.log(token)
-      // localStorage.setItem('username', user.username)
-      // localStorage.setItem('email', email)
-      // localStorage.setItem('token', token)
       alert('successfully logged in')
     } catch (error) {
       localStorage.removeItem('token')
       localStorage.removeItem('user')
     }
   }
+
+  
   return (
     <div className="">
       {/* <Header/> */}
@@ -73,8 +71,8 @@ function Login() {
 
         </div>
         </div>:
-      <div className="flex flex-col overflow-hidden rounded-md max md:flex-row md:flex-1 lg:max-w-screen-md shadow-lg shadow-gray-500/50">
-        <div className="text-white bg-[#effafc] w-0 md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly invisible md:visible">
+      <div className="flex flex-col bg-[#effafc]  overflow-hidden rounded-md max md:flex-row md:flex-1 lg:max-w-screen-md shadow-lg shadow-gray-500/50">
+        <div className="text-white bg-white w-0 md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly invisible md:visible">
           <img alt="image1" src="https://img.freepik.com/free-vector/people-library-flat-vector-illustration_74855-6607.jpg?size=626&ext=jpg&ga=GA1.2.1884151692.1695570958&semt=ais" />
         </div>
         <div>
@@ -113,7 +111,7 @@ function Login() {
                       id="email"
                       name="email"
                       type="email"
-                      placeholder="abc@gmail.com"
+                      placeholder="  abc@gmail.com"
                       autoComplete="email"
                       required=""
                       className="bg-gray-50  border-gray-300  block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -141,7 +139,7 @@ function Login() {
                       id="password"
                       name="password"
                       type="password"
-                      placeholder="••••••••"
+                      placeholder="  ••••••••"
                       autoComplete="current-password"
                       required=""
                       className="bg-gray-50  border-gray-300 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
